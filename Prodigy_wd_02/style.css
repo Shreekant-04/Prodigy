@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Ensure the body takes up the full viewport height */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Light background for better contrast */
+  overflow-y: scroll;
+}
+
+/* Wrapper section with some padding and centering */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: white; /* Background color for the main content */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for better visibility */
+  width: 50%;
+  max-width: 100vmin;
+  height: 100%;
+  max-height: 40vh;
+}
+
+/* Stopwatch styling */
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px; /* Limit the width for larger screens */
+}
+
+/* Time display styling */
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: calc(10px + 2vw); /* Responsive font size */
+}
+
+/* Time span styling */
+.time > span {
+  font-size: calc(20px + 3vw); /* Larger font size for time digits */
+}
+
+/* Buttons container styling */
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* Individual button styling */
+button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: aquamarine;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #7fffd4; /* Slightly darker shade on hover */
+}
+
+button svg {
+  height: 30px;
+  width: 30px;
+}
+
+/* Laps container styling */
+.laps {
+  width: 100%;
+  height: 100%;
+  max-height: 30vh;
+  max-width: 60vmin; /* Increased width for larger screens */
+  padding: 20px;
+  background-color: #fff; /* Background color for lap times */
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+/* Individual lap item styling */
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd; /* Separator between laps */
+}
+
+@media (min-width: 600px) {
+  /* Adjustments for larger screens */
+  .wrapper {
+    flex-direction: row;
+    gap: 40px;
+    width: 90%;
+  }
+
+  .stopwatch {
+    height: auto;
+    width: 60%; /* Adjusted width to make space for larger laps div */
+  }
+
+  .laps {
+    width: 40%; /* Adjusted width to make it larger */
+  }
+
+  .time {
+    gap: 20px;
+  }
+}
