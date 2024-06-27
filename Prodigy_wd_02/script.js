@@ -3,8 +3,6 @@ console.log("hello");
 let hr = 0;
 let min = 0;
 let sec = 0;
-let lapmin = 0;
-let lapsec = 0;
 let start = false;
 let res = true;
 let previousLapTime = { min: 0, sec: 0 };
@@ -78,7 +76,7 @@ function handlelap() {
     div.innerHTML = `
       <span>${item.childElementCount + 1}</span><span>${formatTime(
       currentLapTime
-    )}</span><span>${formatTime(lapDifference)}</span>
+    )}</span><span>+ ${formatTime(lapDifference)}</span>
     `;
     item.prepend(div);
   }
