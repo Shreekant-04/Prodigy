@@ -24,7 +24,7 @@
              <tr>
           <td>3</td>
           <td><a href="Prodigy_wd_03">Task 03 </a></td>
-        <td>Stop Watch</td>
+        <td>Tic Tac Toe Game</td>
           <td><a href="https://deluxe-conkies-f3040b.netlify.app/prodigy_wd_03/">Link</a></td>
         </tr>
         </tbody>
