@@ -47,6 +47,7 @@ function resetAll() {
 // tie
 const tie = () => {
   result.innerText = "A battle of equals! The game ends in a thrilling tie!";
+  result.style.color = "red";
   result.style.visibility = "visible";
 };
 // checking winner by comparing  to winner pattern
@@ -75,12 +76,14 @@ const showWinner = (winner) => {
     : (result.innerText = `Champions! Player 2 takes the game!`);
 
   winner === "⭕" ? player1++ : player2++;
-  result.style.visibility = "visible";
-  blocks.forEach((block) => (block.disabled = true));
+  blocks.forEach((block) => (block.disabled = true)); // disabling all buttons
   document.querySelector(".player1 h3").innerText =
-    player1 < 9 ? `0${player1}` : player1;
+    player1 < 9 ? `0${player1}` : player1; // updating player 1 score
   document.querySelector(".player2 h3").innerText =
-    player2 < 9 ? `0${player2}` : player2;
+    player2 < 9 ? `0${player2}` : player2; // updating player 2 score
+
+  result.style.visibility = "visible";
+  result.style.color = "green";
 };
 
 // calling functions on events
